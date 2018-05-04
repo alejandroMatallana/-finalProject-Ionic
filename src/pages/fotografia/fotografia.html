@@ -1,0 +1,35 @@
+<!--
+  Generated template for the FotografiaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tomar Fotografia
+        <ion-icon  item-end name="ios-camera-outline"></ion-icon>
+      
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+
+    <ion-item>
+        <button ion-button block (click)="takePicture()" >Tomar foto</button>
+      </ion-item>
+
+      <ion-thumbnail *ngIf="!imagen">
+      
+          <ion-label text-center >No hay imagen tomada</ion-label>
+    
+      </ion-thumbnail>
+
+    <ion-thumbnail>
+        <img [src]="imagen" *ngIf="imagen"
+             class="img">
+  
+    </ion-thumbnail>
+
+</ion-content>

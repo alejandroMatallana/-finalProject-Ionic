@@ -1,14 +1,65 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Bienvenido Login
+            <ion-icon item-end
+                      name="ios-ionic"></ion-icon>
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+    <form [formGroup]="myFormLogin"
+          (ngSubmit)="loginUser()">
+        <ion-list>
+            <ion-item text-center>
+                <ion-img width="192"
+                         height="192"
+                         src="assets/imgs/inicioSesion.png"></ion-img>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="person"
+                          item-left></ion-icon>
+                <ion-label stacked>Email:</ion-label>
+                <ion-input formControlName="email"
+                           type="text"
+                           placeholder="Email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="key"
+                          item-left></ion-icon>
+                <ion-label stacked>Password:</ion-label>
+                <ion-input formControlName="password"
+                           type="password"
+                           placeholder="Password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <div padding>
+            <button ion-button
+                    block
+                    type="submit"
+                    [disabled]="!myFormLogin.valid">Ingresar</button>
+
+        </div>
+
+    </form>
+
+    <div text-center>
+        <button ion-button
+                block
+                clear
+                (click)="goToSignup()">
+      Nueva cuenta
+    </button>
+
+    </div>
+
+
+
+
+
+
+
 </ion-content>

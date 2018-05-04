@@ -1,0 +1,40 @@
+<!--
+  Generated template for the DetalleListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalle de la lista
+        <ion-icon  item-end name="ios-search-outline"></ion-icon>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <label class="negrilla" class="colors">User id :</label>
+              {{post.userId}}
+              <br>
+              <label>Id :</label>
+              {{post.id}}
+              <br>
+              <label>Titulo :</label>
+              {{post.title}}
+              <br>
+              <label>Contenido :</label>
+              {{post.body}}
+
+          </ion-thumbnail>
+          
+        </ion-item>
+        
+      </ion-list>
+
+</ion-content>
